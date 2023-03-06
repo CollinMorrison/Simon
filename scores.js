@@ -17,10 +17,10 @@ function loadScores() {
             positionTdEl.textContent = i + 1;
             nameTdEl.textContent = score.name;
             scoreTdEl.textContent = score.score;
-            dateTdEl.textContent = score.data;
+            dateTdEl.textContent = score.date;
         
             const rowEl = document.createElement('tr');
-            rowEl.appendChild(pisitionTdEl);
+            rowEl.appendChild(positionTdEl);
             rowEl.appendChild(nameTdEl);
             rowEl.appendChild(scoreTdEl);
             rowEl.appendChild(dateTdEl);

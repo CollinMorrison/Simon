@@ -24,6 +24,7 @@ class Button {
         this.paint(25);
     }
 
+    //Work around Safari
     async play(volume = 1.0) {
         this.sound.volume = volume;
         await new Promise((resolve) => {

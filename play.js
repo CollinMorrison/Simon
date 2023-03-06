@@ -14,9 +14,9 @@ class Button {
     }
 
     paint(level) {
-        const background = `hst(${this.hue}, 100%, ${level}%)`;
+        const background = `hsl(${this.hue}, 100%, ${level}%)`;
         this.el.style.backgroundColor = background;
-    }
+      }
 
     async press(volume) {
         this.paint(50);
@@ -46,7 +46,7 @@ class Game {
         this.allowPlayer = false;
         this.sequence = [];
         this.playerPlaybackPos = 0;
-        this.mistakeSound = loadSound(error.mp3)
+        this.mistakeSound = loadSound('error.mp3');
 
         document.querySelectorAll('.game-button').forEach((el, i) => {
             if (i < btnDescriptions.length) {

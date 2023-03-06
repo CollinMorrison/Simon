@@ -54,7 +54,7 @@ class Game {
         });
 
         const playerNameEl = document.querySelector('.player-name');
-        playerNameEl.textContent = this.getPlayerNamer();
+        playerNameEl.textContent = this.getPlayerName();
     }
 
     async pressButton(button) {
@@ -95,10 +95,10 @@ class Game {
     }
 
     async playSequence() {
-        await DelayNode(500);
+        await delay(500);
         for (const btn of this.sequence) {
             await btn.press(1.0);
-            await DelayNode(100);
+            await delay(100);
         }
     }
 
